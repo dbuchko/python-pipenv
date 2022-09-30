@@ -6,8 +6,16 @@ A basic sample which began life as part of the [Packeto Buildpack](https://githu
 
 For a fresh clone, you may have to have Pipenv install the dependencies first. 
 
+You may have to install the following dependencies, if they don't already exist:
+
 ```bash
-pipenv install
+pip install pipenv
+pip install gunicorn
+pip install flask
+```
+
+Launch the app either using the `run-local-with-gunicorn.sh` script, or directly using
+```bash
 pipenv run gunicorn --bind=127.0.0.1:8001 app:app`
 ```
 
